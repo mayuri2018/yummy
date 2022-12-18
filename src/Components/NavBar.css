@@ -1,0 +1,25 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.logo{
+    display:flex;
+    gap : 15px;
+    margin-left:50px;
+}
+.logo img{
+    width: 50px;
+}
+.links{
+    display: flex;
+    gap:25px;
+    margin-right: 50px;
+    padding-top: 20px;
+}
+.Links_element{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}

@@ -1,3 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+body, html {
+    font-family: 'Rajdhani', sans-serif;
+}
+.header{
+  background-color: #cccccc;
+  height: 400px;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-image: url("./assets/food.jpeg");
+}
+.header h1{
+  padding-top: 150px;
+}
+.food-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 55px;
+  margin: 50px;
+}
+.food-img img{
+  width: 125px;
+  height: 125px;
+  border-radius: 60px;
+}
+
 .App {
   text-align: center;
 }
