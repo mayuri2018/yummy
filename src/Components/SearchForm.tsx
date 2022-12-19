@@ -1,26 +1,22 @@
-import { type } from "os";
 import React from "react";
-import { UserInput } from "../pages/Recipe";
+import TextField from '@mui/material/TextField';
+
 
 
 type Prop = {
-    userInput : string;
     setUserInput : React.Dispatch<React.SetStateAction<string>>;
 }
 
-export default function SearchForm({userInput, setUserInput}:Prop){
+export default function SearchForm({setUserInput}:Prop){
     function userInputHandler(event : React.ChangeEvent<HTMLInputElement>){
         const input = event.target.value;
         setUserInput(input);
     }
-    console.log(userInput, "userinput");
+    console.log(setUserInput, "userinput");
     
     return(
         <div className="form">
-            <form>
-                <label>Enter the meal name :</label>
-                <input type="text" onChange={userInputHandler}></input>
-            </form>
+            <TextField id="standard-basic" label="Standard" variant="standard" onChange={userInputHandler} helperText="Suggestion : Pizza, pork, lambs"/>
         </div>
     )
 }
