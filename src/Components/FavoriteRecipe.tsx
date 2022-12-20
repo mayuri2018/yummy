@@ -1,5 +1,4 @@
 import React from "react";
-import { Meal } from "../App";
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -11,13 +10,12 @@ import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { Meal } from "../App";
 
-type PropsType = {
-    recipe:Meal;
-    addFavorite : Meal[];
-  setAddFavorite:React.Dispatch<React.SetStateAction<string>>;
-};
-export default function FavoriteItem({recipe}:PropsType){
+type PropsType={
+    item:Meal;
+}
+export default function FavoriteRecipe({item}:PropsType){
     return(
         <div>
             <Card sx={{ maxWidth: 345 }}>
@@ -25,7 +23,7 @@ export default function FavoriteItem({recipe}:PropsType){
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
             R
-            {recipe.strMeal.charAt(0)}
+            {item.strMeal.charAt(0)}
           </Avatar>
         }
         action={
@@ -33,27 +31,27 @@ export default function FavoriteItem({recipe}:PropsType){
             <MoreVertIcon />
           </IconButton>
         }
-        title={recipe.strMeal}
-        subheader={recipe.strCategory}
+        title={item.strMeal}
+        subheader={item.strCategory}
       />
       <CardMedia
         component="img"
         height="194"
-        image={recipe.strMealThumb}
-        alt={recipe.strMeal}
+        image={item.strMealThumb}
+        alt={item.strMeal}
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           Ingridients
         </Typography>
         <List>
-            <ListItem>{recipe.strIngredient1}</ListItem>
-          <ListItem>{recipe.strIngredient2}</ListItem>
-          <ListItem>{recipe.strIngredient3}</ListItem>
+            <ListItem>{item.strIngredient1}</ListItem>
+          <ListItem>{item.strIngredient2}</ListItem>
+          <ListItem>{item.strIngredient3}</ListItem>
         </List>
       </CardContent>
       
     </Card>
         </div>
-    )
+    );
 }

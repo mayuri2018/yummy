@@ -3,14 +3,13 @@ import { Meal } from "../App";
 import FavoriteItem from '../Components/FavoriteItem';
 
 type PropsType = {
-  recipe:Meal[];
   addFavorite : Meal[];
   setAddFavorite:React.Dispatch<React.SetStateAction<Meal[]>>;
 }
 
-export default function Favorite({recipe, addFavorite,setAddFavorite}:PropsType) {
+export default function Favorite({addFavorite,setAddFavorite}:PropsType) {
   return (
-    <div className='addfevorite'>
-      <FavoriteItem recipe={recipe} addFavorite={addFavorite} setAddFavorite={setAddFavorite}/>
+    <div className='addfavorite'>
+      <FavoriteItem addFavorite={addFavorite} setAddFavorite={setAddFavorite}/>
     </div>
 )};

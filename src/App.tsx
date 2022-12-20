@@ -43,7 +43,7 @@ const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${userInput}`
       <Routes>
         <Route path="" element ={<Home />}></Route>
         <Route path='/recipe' element={<Recipe recipe={recipe} setUserInput={setUserInput} addFavorite={addFavorite} setAddFavorite={setAddFavorite}/>}></Route>
-        <Route path="/favorite" element = {<Favorite recipe={recipe} addFavorite={addFavorite} setAddFavorite={setAddFavorite}/>}></Route>
+        <Route path="/favorite" element = {<Favorite addFavorite={addFavorite} setAddFavorite={setAddFavorite}/>}></Route>
         <Route path="/contact" element = {<Contct />}></Route>
       </Routes>
     </div>

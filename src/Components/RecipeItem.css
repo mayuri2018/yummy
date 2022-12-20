@@ -1,0 +1,8 @@
+.recipeitem {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 30%;
+    float: left;
+    margin: 1%;
+    box-shadow: 5px 5px 5px 5px #f5f2f2;
+}

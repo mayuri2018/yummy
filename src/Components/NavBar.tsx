@@ -1,12 +1,8 @@
 import React from "react";
 import logo from "../assets/chef.png"
 import { Link } from "react-router-dom";
-//import Badge from '@mui/material/Badge';
-import MailIcon from '@mui/icons-material/Mail';
 import Badge, { BadgeProps } from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
-import IconButton from '@mui/material/IconButton';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import "./NavBar.css";
 import { Meal } from "../App";
 
