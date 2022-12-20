@@ -15,7 +15,7 @@ export default function RecipeList({recipe,addFavorite, setAddFavorite}:PropsTyp
       return <div>Sorry we have not get recipe yet!</div>
     }
 return(
-  <div>
+  <div className="recipeList">
 {recipe.map((item)=>(
 <RecipeItem key={item.idMeal} recipe={item} addFavorite={addFavorite} setAddFavorite={setAddFavorite}/>
 ))}

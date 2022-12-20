@@ -8,7 +8,7 @@ type PropsType = {
 };
 export default function FavoriteItem({addFavorite, setAddFavorite}:PropsType){
     return(
-        <div>
+        <div className="FavoriteItem">
           {addFavorite.map((item)=>(
             <FavoriteRecipe item={item}/>
           )

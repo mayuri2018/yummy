@@ -53,11 +53,10 @@ export default function RecipeItem({recipe, addFavorite, setAddFavorite}:PropsTy
     console.log(addFavorite,"recipe");
     return(
         <div className="recipeitem">
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: 500 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
             {recipe.strMeal.charAt(0)}
           </Avatar>
         }

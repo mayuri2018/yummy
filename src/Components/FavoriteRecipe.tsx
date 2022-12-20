@@ -11,18 +11,18 @@ import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Meal } from "../App";
+import "./FavoriteRecipe.css";
 
 type PropsType={
     item:Meal;
 }
 export default function FavoriteRecipe({item}:PropsType){
     return(
-        <div>
-            <Card sx={{ maxWidth: 345 }}>
+        <div className="FavoriteRecipe">
+            <Card sx={{ maxWidth: 500 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
             {item.strMeal.charAt(0)}
           </Avatar>
         }
