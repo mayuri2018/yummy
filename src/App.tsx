@@ -26,6 +26,8 @@ function App() {
   const[recipe, setRecipe]= useState<Meal[]>([]);
   const [userInput, setUserInput]=useState("");
   const [addFavorite, setAddFavorite]=useState<Meal[]>([]);
+  const [totalFavorite, setTotalFavorite] = useState<number>(0);
+
 // useEffect for onetime fetch data
 const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${userInput}`
     useEffect(()=>{
@@ -37,13 +39,29 @@ const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${userInput}`
     console.log(recipe, "data");
     //console.log(userInput, "userinput");
 
+//Delate favorite
+    const deleteFavorite = (recipe: Meal) => {
+      let favoriteArray = [...addFavorite];
+      let recipeIndex = favoriteArray.findIndex(
+        (item) => item.idMeal === recipe.idMeal
+      );
+      if (recipeIndex !== -1) {
+        setAddFavorite(
+        addFavorite.filter(
+            (item) => addFavorite.indexOf(item) !== recipeIndex
+          )
+        );
+        setTotalFavorite((totalFavorite) => totalFavorite - 1);
+      }
+    };
+  
   return(
     <div className="App">
       <NavBar  addFavorite={addFavorite}/>
       <Routes>
         <Route path="" element ={<Home />}></Route>
         <Route path='/recipe' element={<Recipe recipe={recipe} setUserInput={setUserInput} addFavorite={addFavorite} setAddFavorite={setAddFavorite}/>}></Route>
-        <Route path="/favorite" element = {<Favorite addFavorite={addFavorite} setAddFavorite={setAddFavorite}/>}></Route>
+        <Route path="/favorite" element = {<Favorite addFavorite={addFavorite} setAddFavorite={setAddFavorite} deleteFavorite={deleteFavorite}/>}></Route>
         <Route path="/contact" element = {<Contct />}></Route>
       </Routes>
     </div>
