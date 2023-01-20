@@ -1,3 +1,6 @@
+<h1>DEMO</h1>
+<a href="https://isa-6-yummy-project-6osjdznw4-mayurivijaya-gmailcom.vercel.app/">DEMOLINK</a>
+
 # Yummy - React App
 
 The purpose of this assignment is to practice TypeScript
